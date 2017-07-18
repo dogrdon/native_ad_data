@@ -1,9 +1,9 @@
 {% extends "layout.html" %}
 {% block body %}
   <div>
-    <p class="lead">{{ad_count}} Ads returned for {{provider}}</p>
-    <table class="table table-condensed table-striped">
-      <thead>
+    <p class="lead">Brought to you by: {{ad.provider}}</p>
+    <table class="table">
+    <thead>
         <th>Date</th>
         <th>Image</th>
         <th>Provider</th>
@@ -13,7 +13,6 @@
         <th>Image Host</th>
       </thead>
       <tbody>
-        {% for ad in ads %}
         <tr>
           <td><b>{{ad.date}}</b></td>
           <td><img src="{{ad.img}}" width="150"/></td>
@@ -27,8 +26,4 @@
       </tbody>
     </table>
   </div>
-  {% import "macros.jnj" as common %}
-  {% if nav_offsets and nav_path -%}
-    {{ common.display_nav(nav_offsets, nav_path, ad_count, query)|safe }}
-  {% endif -%}
 {% endblock %}
