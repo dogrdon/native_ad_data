@@ -1,10 +1,15 @@
 from elasticsearch import Elasticsearch
 from pymongo import MongoClient
 
+"""Bulk ingest a mongodb collection to elastic search
+
+   Below is hardcoded, but we are indexing a mongodb collection to elasticsearch
+"""
+
 TIMEOUT = 60
 db, collection = ('native_ads', 'ads')
 es = Elasticsearch(timeout=TIMEOUT)
-es.indices.delete(index=db, ignore=[400, 404])
+es.indices.delete(index=db, ignore=[400, 404]) #start by deleting the existing index so we can just recreate
 
 def index_mongo(db, collection):
 	conn = MongoClient()

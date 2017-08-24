@@ -1,6 +1,11 @@
 theothercontent browser notes:
 ==============================
 
+### Import of data to mongo after deduped
+
+Where we are running a mongo db `native_ads` with a collection called `ads` and a csv file named `native_ad_data_deduped.csv`
+
+    mongoimport -d native_ads -c ads --type csv --file native_ad_data_deduped.csv --headerline
 
 ### Set up elasticsearch
 
@@ -53,5 +58,6 @@ theothercontent browser notes:
 
 ### Bulk index from mongo using python
 
-see `./indexes.py`
+run `python ./indexes.py`
+
 
