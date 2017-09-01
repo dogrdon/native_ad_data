@@ -7,25 +7,16 @@ This is the raw data dump from 3 months (2017-03-27 to 2017-07-07) of collecting
 
 #### Schema
 
-**_id**: mongodb unique id for record
-
-**headline**: The headline text associated with with the ad content
-
-**link**: The URL of the native ad content as rendered from the site it is found at
-
-**img**: img src url for the image associated with the native ad content
-
-**provider**: The Native ad content provider (e.g., Taboola, Outbrain, Zergnet, or Revcontent)
-
-**source**: The website where the native ad was first found (e.g., http://www.tmz.com, http://breitbart.com)
-
-**img_file**: A hash of the `img` column and file extension for the file as it sits on the filesystem it was downloaded to
-
-**date**: Date the item was collected
-
-**final_link**: If link to the actual native ad content redirected to another url, it should be this, but this was not always successfully obtained
-
-**orig_article**: The url to the article where the native ad content was found
+- **_id**: mongodb unique id for record
+- **headline**: The headline text associated with with the ad content
+- **link**: The URL of the native ad content as rendered from the site it is found at
+- **img**: img src url for the image associated with the native ad content
+- **provider**: The Native ad content provider (e.g., Taboola, Outbrain, Zergnet, or Revcontent)
+- **source**: The website where the native ad was first found (e.g., http://www.tmz.com, http://- breitbart.com)
+- **img_file**: A hash of the `img` column and file extension for the file as it sits on the - filesystem it was downloaded to
+- **date**: Date the item was collected
+- **final_link**: If link to the actual native ad content redirected to another url, it should be - this, but this was not always successfully obtained
+- **orig_article**: The url to the article where the native ad content was found
 
 
 ### ./out/2017-08-30-01_47_native_ad_data_deduped.csv
@@ -34,31 +25,19 @@ csv dump of native ad data above after it was loaded into the [analysis notebook
 
 #### Schema
 
-**_id**: mongodb unique id for record
-
-**headline**: The headline text associated with with the ad content
-
-**link**: The URL of the native ad content as rendered from the site it is found at
-
-**img**: img src url for the image associated with the native ad content
-
-**provider**: The Native ad content provider (e.g., Taboola, Outbrain, Zergnet, or Revcontent)
-
-**source**: The website where the native ad was first found (e.g., http://www.tmz.com, http://breitbart.com)
-
-**img_file**: A hash of the `img` column and file extension for the file as it sits on the filesystem it was downloaded to
-
-**date**: Date the item was collected
-
-**final_link**: If link to the actual native ad content redirected to another url, it should be this, but this was not always successfully obtained
-
-**orig_article**: The url to the article where the native ad content was found
-
-**img_host**: Host only from the url at `img`
-
-**link_host**: Host only for the url at `link`
-
-**source_class**: A roughly estimated political classification based on the source of the content where the native ad was found (e.g., Left, Right, Center, Tabloid)*
+- **_id**: mongodb unique id for record
+- **headline**: The headline text associated with with the ad content
+- **link**: The URL of the native ad content as rendered from the site it is found at
+- **img**: img src url for the image associated with the native ad content
+- **provider**: The Native ad content provider (e.g., Taboola, Outbrain, Zergnet, or Revcontent)
+- **source**: The website where the native ad was first found (e.g., http://www.tmz.com, http://- breitbart.com)
+- **img_file**: A hash of the `img` column and file extension for the file as it sits on the - filesystem it was downloaded to
+- **date**: Date the item was collected
+- **final_link**: If link to the actual native ad content redirected to another url, it should be - this, but this was not always successfully obtained
+- **orig_article**: The url to the article where the native ad content was found
+- **img_host**: Host only from the url at `img`
+- **link_host**: Host only for the url at `link`
+- **source_class**: A roughly estimated political classification based on the source of the content where the native ad was found (e.g., Left, Right, Center, Tabloid)*
 
 *A note on the classfications: Left = Left or progressive leaning, Right = Right or conservative learning, Center = Attempts to report without clear political bias, Tabloid = Website that reports largely on entertainment and lifestyle news, without concern for political affiliation.
 
